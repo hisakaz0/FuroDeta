@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FuroDeta Options</title>
+    <script src="../lib/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo&#45;pink.min.css"> -->
+    <!-- <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <header>
+      <h1>Device List</h1>
+      <p>
+      Please check one of devices to send notifications
+      which Kanmus raises from the bath.<br />
+      First time or changed devices in Pushbullet,
+      then click <strong>Get device list</strong>
+      to show devices you can use.
+      </p>
+      <button id='get-device-list'>Get device list</button>
+      <button id='test'>Test</button>
+    </header>
+    <section>
+      <ul id="device-list-wrapper">
+      </ul>
+    </section>
+    <script src="src/funcs.js"></script>
+    <script src="src/setOptionsPage.js"></script>
+  </body>
+</html>
+
