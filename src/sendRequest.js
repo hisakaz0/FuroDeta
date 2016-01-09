@@ -1,5 +1,4 @@
 
-console.log('kazu');
 chrome.devtools.network.onRequestFinished.addListener(function (request) {
   chrome.runtime.sendMessage('get request');
   // var api_name = request.request.url.replace(/^http:\/\/[^\/]+\/kcsapi\//, '/');

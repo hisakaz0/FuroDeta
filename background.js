@@ -7,12 +7,6 @@ chrome.runtime.onConnect.addListener(function(port) {
   });
 });
 
-chrome.app.runtime.onLaunched.addListener(function() {
-  chrome.storage.sync.get('pushbullet', function(data) {
-    data['pushbullet']['targets'] = [];
-  });
-});
-
 // プッシュバレットにﾒｯｾｰｼﾞを送る
 chrome.alarms.onAlarm.addListener(function(alarm) {
   var cube = JSON.parse(alarm.name);

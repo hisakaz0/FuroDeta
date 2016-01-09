@@ -5,8 +5,6 @@ chrome.storage.sync.get("access_token", function(data) {
   chrome.storage.sync.set(data);
 
   var port = chrome.runtime.connect({name: "access_token"});
-  console.log("send msg");
-  console.log(port);
   port.postMessage({body: "saved"});
 });
 

@@ -36,6 +36,7 @@ function showDeviceList(devices) {
     var text     = document.createElement('span');
     var checkbox = document.createElement('input');
     text.innerText = devices[index]['nickname'];
+    checkbox.classList.add('target');
     checkbox.setAttribute('type', 'checkbox');
     checkbox.setAttribute('name', 'target');
     checkbox.setAttribute('id', devices[index]['iden']);
@@ -46,7 +47,6 @@ function showDeviceList(devices) {
   }
 }
 
-
 function sendNoteMessage(access_token, iden, title, body) {
   $.ajax({
     type: "POST",
@@ -56,17 +56,13 @@ function sendNoteMessage(access_token, iden, title, body) {
     url: 'https://api.pushbullet.com/v2/pushes',
     contentType: 'application/json',
     data: '{ "title": "' + title +'", "body": "' + body + '", "device_iden": "' + iden + '", "type": "note" }',
-    success: function(data, dataType) {
-      console.log(data);
-    },
     error: function(a, b, c){
-      console.log(a);
+      console.error(a);
     }
   });
 }
 
 function deleteTargetDevices() {
-  var data = {};
-  data["targets"] = [];
+  var data = {targets:[]};
   chrome.storage.sync.set(data);
 }
