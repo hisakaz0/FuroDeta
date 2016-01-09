@@ -50,9 +50,9 @@ test_btn.addEventListener('click', function() {
         body: "From " + info["when"]
       };
       chrome.alarms.create(JSON.stringify(cube), info);
-      console.log('add alarm');
-      console.log(cube);
-      console.log(info);
+      // console.log('add alarm');
+      // console.log(cube);
+      // console.log(info);
     }
   });
 });
