@@ -3,6 +3,7 @@
   "name": "FuroDeta",
   "description": "Notificater Kanmusu raises from the bath",
   "version": "0.1",
+  "version_name": "0.1 Dev.",
   "browser_action": {
     "default_icon": "popup.png",
     "default_popup": "popup.html"

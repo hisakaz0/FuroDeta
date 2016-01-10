@@ -42,13 +42,15 @@ test_btn.addEventListener('click', function() {
     if (data["access_token"] == undefined || data["access_token"] == '') return;
     if (data["targets"]      == undefined || data["targets"]      == '') return;
     for (var i = 0; i< data["targets"].length; i++) {
-      var info = { when: Date.now() + 5000 };
+      var when = Date.now() + 5000;
+      var info = {when: when};
       var cube = {
         access_token: data["access_token"],
         target: data["targets"][i],
         title: "Hello world!",
-        body: "From " + info["when"]
+        body: "This msg sent at " + Date(when)
       };
+      console.log(cube,info);
       chrome.alarms.create(JSON.stringify(cube), info);
       // console.log('add alarm');
       // console.log(cube);

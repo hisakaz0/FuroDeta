@@ -1,2 +1,2 @@
 
-$('#option-page-link').attr('href', chrome.extension.getURL('options/index.html'));
+$('#option-page-link').attr('href', chrome.extension.getURL('options.html'));

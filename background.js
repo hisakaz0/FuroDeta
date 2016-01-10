@@ -10,7 +10,7 @@ chrome.runtime.onConnect.addListener(function(port) {
 // プッシュバレットにﾒｯｾｰｼﾞを送る
 chrome.alarms.onAlarm.addListener(function(alarm) {
   var cube = JSON.parse(alarm.name);
-  console.log("Alarm Fired! : " + alarm.name);
+  console.log(alarm);
   sendNoteMessage(cube.access_token, cube.target, cube.title, cube.body);
 });
 
