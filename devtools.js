@@ -58,21 +58,20 @@ chrome.devtools.network.onRequestFinished.addListener(function (r) {
           var ship    = getShipData(ship_id);
           for (var j = 0; j < targets.length; j++) {
             var info = {when: out};
-            var cube  = {
+            var alarm = {
               access_token: access_token,
               target: targets[j],
               title: ship.api_name + "がお風呂からでました.",
               body: '出た時刻:' + out_str
             };
-            console.log(cube,info);
-            // なぜだろう...
-            // chrome.alarms.create(JSON.stringify(cube), info);
-            // 動いてないところ
-            // chrome.alarms.get(JSON.stringify(cube), function(alarm) {
-            //   if (alarm) return;
-            //   console.log(cube,date);
-            //   chrome.alarms.create(JSON.stringify(cube), date);
-            // });
+            var msg = {
+              alarm: alarm,
+              alarm_info: info,
+              api_name: 'ndock'
+            }
+            console.log(msg);
+            var port = chrome.runtime.connect({name: 'kancolle'});
+            port.postMessage(msg);
           }
         }
       });
