@@ -30,17 +30,17 @@ function showDeviceList(devices) {
   }
 
   // show Device List
-  for (var index = 0; index < devices.length; index++) {
-    if (!devices[index]['active']) return;
+  for (var i = 0; i < devices.length; i++) {
+    if (!devices[i]['active']) continue;
     var item     = document.createElement('li');
     var text     = document.createElement('span');
     var checkbox = document.createElement('input');
-    text.innerText = devices[index]['nickname'];
+    text.innerText = devices[i]['nickname'];
     checkbox.classList.add('target');
     checkbox.setAttribute('type', 'checkbox');
     checkbox.setAttribute('name', 'target');
-    checkbox.setAttribute('id', devices[index]['iden']);
-    checkbox.setAttribute('value', devices[index]['iden']);
+    checkbox.setAttribute('id', devices[i]['iden']);
+    checkbox.setAttribute('value', devices[i]['iden']);
     item.appendChild(checkbox);
     item.appendChild(text);
     device_list_wrapper.appendChild(item);

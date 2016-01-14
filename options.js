@@ -75,7 +75,6 @@ chrome.storage.sync.get("devices", function(data) {
     // show device list
     chrome.storage.sync.get("devices", function(data) {
       if (data["devices"] != undefined || data["devices"] != '') {
-        console.log(data["devices"]);
         showDeviceList(data["devices"]); // func.js have this
       }
       // check target devices
