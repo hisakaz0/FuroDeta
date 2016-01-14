@@ -1,5 +1,4 @@
 // -*- coding: utf-8 -*-
-
 function getShipData(ship_id) {
   if (!ship_id) return;
   var api_ship     = JSON.parse(localStorage.api_ship);
