@@ -69,7 +69,6 @@ chrome.devtools.network.onRequestFinished.addListener(function (r) {
               alarm_info: info,
               api_name: 'ndock'
             }
-            console.log(msg);
             var port = chrome.runtime.connect({name: 'kancolle'});
             port.postMessage(msg);
           }
