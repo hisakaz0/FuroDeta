@@ -26,7 +26,7 @@ git clone https://github.com/pinkienort/FuroDeta.git
 
 ## そのた
 プルリやイシューを歓迎します.
-要望や意見は[hisakazu (@cantabile_hisa) on Twitter](https://twitter.com/cantabile_hisa)に.
+要望や意見は[hisakazu](https://twitter.com/cantabile_hisa)まで.
 
 ## 参考
 [hkuno9000/KanColle-YPS](https://github.com/hkuno9000/KanColle-YPS)を参考に作りました(あざかずです.
